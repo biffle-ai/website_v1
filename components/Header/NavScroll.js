@@ -33,6 +33,8 @@ function NavScroll(props) {
   const { onToggleDark, onToggleDir, home } = props;
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  console.log(createData(navMenu[0], '#' + navMenu[0]));
+  
   const [menuList] = useState([
     createData(navMenu[0], '#' + navMenu[0]),
     createData(navMenu[1], '#' + navMenu[1]),
@@ -80,7 +82,7 @@ function NavScroll(props) {
           openDrawer && classes.openDrawer
         )}
       >
-        <Container fixed={isDesktop}>
+        {/* <Container fixed={isDesktop}>
           <div className={classes.headerContent}>
             <nav className={classes.navMenu}>
               { isMobile && (
@@ -114,7 +116,7 @@ function NavScroll(props) {
             </nav>
             <UserMenu onToggleDark={onToggleDark} onToggleDir={onToggleDir} />
           </div>
-        </Container>
+        </Container> */}
       </AppBar>
     </Fragment>
   );

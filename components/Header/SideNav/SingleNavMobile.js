@@ -48,12 +48,12 @@ function SingleNavMobile(props) {
         </List>
         <Divider />
         <List className={classes.userMenu}>
-          {['login', 'register'].map((text, index) => (
+          {['Become a Creator'].map((text, index) => (
             <ListItem
               key={index.toString()}
               className={cx(classes.noChild, curURL === curOrigin + langPath + '/' + text ? classes.current : '')}
               component="a"
-              href={link.social[text]}
+              href={link.social.onboarding}
               button
             >
               <ListItemText className={classes.menuList} primary={t('' + text)} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import logo from '~/public/images/logo-social.svg';
-import brand from '~/public/text/brand';
+import logo from '~/public/images/biffleLogo.png';
+// import brand from '~/public/text/brand';
 import useStyles from './logo-style';
 
 function Logo(props) {
@@ -10,7 +10,7 @@ function Logo(props) {
   return (
     <span className={cx(classes[type], classes.logo, classes[size])}>
       <img src={logo} alt="logo" />
-      { type !== 'only' ? brand.social.name : '' }
+      {/* { type !== 'only' ? brand.social.name : '' } */}
     </span>
   );
 }

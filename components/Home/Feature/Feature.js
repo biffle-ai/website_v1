@@ -6,11 +6,13 @@ import { useTheme } from '@mui/material/styles';
 import ScrollAnimation from 'react-scroll-animation-wrapper';
 import Grid from '@mui/material/Grid';
 import { useTranslation } from 'next-i18next';
+import { Button } from '@mui/material';
 import { useTextAlign, useText } from '~/theme/common';
 import imgAPI from '~/public/images/imgAPI';
 import Title from '../../Title';
 import TitleSecondary from '../../Title/TitleSecondary';
 import useStyles from './feature-style';
+import link from '~/public/text/link';
 
 function Feature() {
   const { classes, cx } = useStyles();
@@ -27,7 +29,7 @@ function Feature() {
       <Container fixed={isDesktop}>
         <Title align="center">
           <span>
-            {t('social-landing.feature_title')}
+            Why Choose Biffle?
           </span>
         </Title>
         <div className={classes.item}>
@@ -66,11 +68,11 @@ function Feature() {
               <Box px={{ sm: 4 }}>
                 <div className={classes.desc}>
                   <TitleSecondary
-                    text={t('social-landing.feature_title1')}
+                    text="Personalized Connections"
                     align={isMobile ? 'center' : 'left'}
                   />
                   <h6 className={cx(text.subtitle2, isMobile ? align.textCenter : align.textLeft)}>
-                    {t('social-landing.feature_desc1')}
+                    Connect with live with creators, influencers, and experts in a safe, judgment-free space.
                   </h6>
                 </div>
               </Box>
@@ -83,11 +85,11 @@ function Feature() {
               <Box px={{ sm: 4 }}>
                 <div className={classes.desc}>
                   <TitleSecondary
-                    text={t('social-landing.feature_title2')}
+                    text="Explore yourself – In ways you can’t imagine!"
                     align={isMobile ? 'center' : 'right'}
                   />
                   <h6 className={cx(text.subtitle2, isMobile ? align.textCenter : align.textRight)}>
-                    {t('social-landing.feature_desc2')}
+                    From casual conversations to expert advice, find creators who match your interests.
                   </h6>
                 </div>
               </Box>
@@ -131,14 +133,14 @@ function Feature() {
             </svg>
           </div>
           <TitleSecondary
-            text={t('social-landing.feature_title3')}
+            text="Exclusive Content"
             align="center"
           />
           <Grid container justifyContent="center" spacing={6}>
             <Grid item md={10} xs={12}>
               <Box p={{ sm: 6 }}>
                 <h6 className={cx(align.textCenter, text.subtitle2)}>
-                  {t('social-landing.feature_desc3')}
+                  Unlock premium posts, live streams, and private messages with your favorite creators.
                 </h6>
                 <ScrollAnimation
                   animateOnce
@@ -170,6 +172,12 @@ function Feature() {
             </Grid>
           </Grid>
         </div>
+        
+        <Box display="flex" justifyContent="center">
+          <Button size="large" variant="contained" color="secondary" href={link.social.onboarding} className={classes.button}>
+            Start your 7 days free trial
+          </Button>
+        </Box>
       </Container>
     </div>
   );

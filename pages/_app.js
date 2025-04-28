@@ -57,7 +57,7 @@ function MyApp(props) {
 
   const curLang = lngDetector.detect();
 
-  const themeName = 'joker';
+  const themeName = 'rose';
   const defaultTheme = 'light';
   const [theme, setTheme] = useState({
     ...appTheme(themeName, defaultTheme),

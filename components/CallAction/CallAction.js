@@ -15,9 +15,9 @@ function CallAction() {
         {t('social-landing.footer_text')}
       </h4>
       <div className={classes.btnArea}>
-        <a href="#">
+        {/* <a href="#">
           <img src="/images/social/app-store.png" alt="app store" />
-        </a>
+        </a> */}
         <a href="#">
           <img src="/images/social/play-store.png" alt="play store" />
         </a>

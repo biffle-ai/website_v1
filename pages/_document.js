@@ -27,10 +27,10 @@ class MyDocument extends Document {
               style={{
                 opacity: 0.2,
                 position: 'fixed',
-                top: 'calc(50% - 50px)',
-                left: 'calc(50% - 50px)'
+                top: 'calc(40% - 50px)',
+                left: 'calc(40% - 80px)'
               }}
-              src="/images/preloader.gif"
+              src="/images/biffleLogo.png"
               alt="loading"
             />
           </div>

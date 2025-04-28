@@ -28,13 +28,14 @@ function MixedNav(props) {
     >
       {menuPrimary.map(item => (
         <li key={item.id.toString()}>
+          {/* {console.log(item.name)} */}
           {singleNav ? (
             <Button component={LinkBtn} offset={() => 100} href={item.url}>
-              {t('social-landing.header_' + item.name)}
+              {item.name}
             </Button>
           ) : (
             <Button href={'/' + item.url}>
-              {t('social-landing.header_' + item.name)}
+              {item.name}
             </Button>
           )}
         </li>

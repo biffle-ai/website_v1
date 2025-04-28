@@ -59,7 +59,7 @@ function Basic(props) {
             </div>
           </nav>
           <nav className={classes.userMenu}>
-            <Button href={href} color="primary" variant="contained">{text}</Button>
+            {/* <Button href={href} color="primary" variant="contained">{text}</Button> */}
             { isDesktop && <span className={classes.vDivider} /> }
             <Settings toggleDark={onToggleDark} toggleDir={onToggleDir} />
           </nav>

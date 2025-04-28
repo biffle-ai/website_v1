@@ -10,6 +10,7 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import useStyles from './counter-style';
 import { useText } from '~/theme/common';
+// import Title from '../../Title';
 
 function Counter(props) {
   const { classes, cx } = useStyles();

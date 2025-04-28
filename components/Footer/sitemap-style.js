@@ -67,7 +67,7 @@ const footerStyles = makeStyles({ uniqId: 'sitemap' })((theme, _params, classes)
     alignItems: 'center',
     marginBottom: theme.spacing(3),
     '& img': {
-      width: 48,
+      width: 80,
       marginRight: theme.spacing(),
     },
     [theme.breakpoints.down('md')]: {

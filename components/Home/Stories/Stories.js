@@ -11,57 +11,40 @@ import useStyles from './stories-style';
 
 const storyContent = [
   {
-    text: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam nec ex aliquet, aliquam neque non.',
+    text: 'I used to feel nervous talking to new people, especially girls. Through this Biffle app, I found genuine people who helped me build confidence with meaningful conversations. Now I look forward to every call!.',
     avatar: imgAPI.avatar[10],
-    name: 'John Doe',
-    title: 'Chief Digital Officer',
+    name: 'Deepak, 22 yrs',
+    title: '(Student, Mumbai)',
   },
   {
-    text: 'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
+    text: 'The cultural exchange on Biffle.ai is incredible. Last week I learned the Ghee Podi Idli recipe from a creator in Chennai - all through a secure video call. Mind-blowing!.',
     avatar: imgAPI.avatar[1],
-    name: 'Jean Doe',
-    title: 'Chief Digital Officer',
+    name: 'Priya, 27 yrs',
+    title: 'Marketing Professional, Delhi',
   },
   {
-    text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[2],
-    name: 'Jena Doe',
-    title: 'Graphic Designer',
+    text:"Finally, a platform where I can have meaningful discussions about my photography passion with like minded creators. The verification system makes me feel completely safe.", 
+    avatar: imgAPI.avatar[10],
+    name: 'Rahul, 31 yrs',
+    title: 'Software Engineer, Bangalore',
   },
   {
-    text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
+    text: 'As someone who moved cities for studies, Biffle.ai became my comfort space. My favorite Bffl Ananya makes me feel like talking to an angel in dreams.',
+    avatar: imgAPI.avatar[10],
+    name: 'Anuj, 22 yrs',
+    title: 'College Student, Kolkata',
+  },
+  {
+    text: 'Really amazed by this concept of learning with conversations. I now teach students across the globe. The language filters help me connect with serious learners - no more time wasted!',
     avatar: imgAPI.avatar[3],
-    name: 'Jovelin Doe',
-    title: 'Senior Graphic Designer',
+    name: 'Jennifer D’sousa 34 yrs ',
+    title: 'English Language Tutor, Delhi',
   },
   {
-    text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+    text: 'Really amazed by this concept of learning with conversations. I now teach students across the globe. The language filters help me connect with serious learners - no more time wasted!',
     avatar: imgAPI.avatar[4],
-    name: 'Jihan Doe',
-  },
-  {
-    text: 'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
-    avatar: imgAPI.avatar[6],
-    name: 'Jovelin Doe',
-    title: 'Senior Graphic Designer',
-  },
-  {
-    text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[7],
-    name: 'John Doe',
-    title: 'Senior Graphic Designer',
-  },
-  {
-    text: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam nec ex aliquet, aliquam neque non.',
-    avatar: imgAPI.avatar[9],
-    name: 'John Doe',
-    title: 'Chief Digital Officer',
-  },
-  {
-    text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[8],
-    name: 'Jean Doe',
-    title: 'Chief Digital Officer',
+    name: 'Jennifer D’sousa 34 yrs',
+    title: 'English Language Tutor, Delhi',
   },
 ];
 
@@ -100,7 +83,7 @@ function Stories() {
     centerPadding: '2px',
     centerMode: true,
     autoplaySpeed: 5000,
-    slidesToShow: 7,
+    slidesToShow: 6,
     pauseOnHover: false,
     arrows: false,
     responsive: [{

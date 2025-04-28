@@ -1,24 +1,24 @@
 import React, {
-  useState,
-  useRef,
-  useEffect
+  // useState,
+  // useRef,
+  // useEffect
 } from 'react';
 import PropTypes from 'prop-types';
-import Container from '@mui/material/Container';
+// import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Fade from '@mui/material/Fade';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
+// import ClickAwayListener from '@mui/material/ClickAwayListener';
+// import Fade from '@mui/material/Fade';
+// import Paper from '@mui/material/Paper';
+// import Popper from '@mui/material/Popper';
 import Scrollspy from 'react-scrollspy';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-import Icon from '@mui/material/Icon';
-import { useTranslation } from 'next-i18next';
+// import List from '@mui/material/List';
+// import ListItem from '@mui/material/ListItem';
+// import ListItemText from '@mui/material/ListItemText';
+// import ListSubheader from '@mui/material/ListSubheader';
+// import Icon from '@mui/material/Icon';
+// import { useTranslation } from 'next-i18next';
 import useStyles from '../header-style';
 import navMenu from '../data/single';
 
@@ -29,31 +29,31 @@ const LinkBtn = React.forwardRef(function LinkBtn(props, ref) { // eslint-disabl
 function MixedNav(props) {
   const {
     menuPrimary,
-    menuSecondary,
-    open,
-    toggle,
-    close,
+    // menuSecondary,
+    // open,
+    // toggle,
+    // close,
     singleNav,
   } = props;
   const { classes } = useStyles();
-  const { t, i18n } = useTranslation('common');
+  // const { t, i18n } = useTranslation('common');
 
-  const anchorRef = useRef(null);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [curURL, setCurURL] = useState('');
-  const [curOrigin, setCurOrigin] = useState('');
-  const [langPath, setLangPath] = useState('');
+  // const anchorRef = useRef(null);
+  // const [anchorEl, setAnchorEl] = useState(null);
+  // const [curURL, setCurURL] = useState('');
+  // const [curOrigin, setCurOrigin] = useState('');
+  // const [langPath, setLangPath] = useState('');
 
-  const handleToggle = (event) => {
-    setAnchorEl(event.currentTarget);
-    toggle();
-  };
+  // const handleToggle = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  //   toggle();
+  // };
 
-  useEffect(() => {
-    setCurURL(window.location.href);
-    setCurOrigin(window.location.origin);
-    setLangPath('/' + i18n.language);
-  }, []);
+  // useEffect(() => {
+  //   setCurURL(window.location.href);
+  //   setCurOrigin(window.location.origin);
+  //   setLangPath('/' + i18n.language);
+  // }, []);
 
   return (
     <Scrollspy
@@ -65,16 +65,16 @@ function MixedNav(props) {
         <li key={item.id.toString()}>
           {singleNav ? (
             <Button component={LinkBtn} offset={() => 100} href={item.url}>
-              {t('social-landing.header_' + item.name)}
+              {item.name}
             </Button>
           ) : (
             <Button href={'/' + item.url}>
-              {t('social-landing.header_' + item.name)}
+              {item.name}
             </Button>
           )}
         </li>
       ))}
-      <li>
+      {/* <li>
         <div>
           <Button
             onClick={(e) => handleToggle(e)}
@@ -134,17 +134,17 @@ function MixedNav(props) {
             )}
           </Popper>
         </div>
-      </li>
+      </li> */}
     </Scrollspy>
   );
 }
 
 MixedNav.propTypes = {
   menuPrimary: PropTypes.array.isRequired,
-  menuSecondary: PropTypes.array.isRequired,
-  close: PropTypes.func.isRequired,
-  toggle: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
+  // menuSecondary: PropTypes.array.isRequired,
+  // close: PropTypes.func.isRequired,
+  // toggle: PropTypes.func.isRequired,
+  // open: PropTypes.bool.isRequired,
   singleNav: PropTypes.bool,
 };
 

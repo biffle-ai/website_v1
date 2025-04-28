@@ -131,12 +131,12 @@ function BannerSlider() {
                           {t('social-landing.banner_title')}
                         </h4>
                         <h5 className={text.subtitle}>
-                          {t('social-landing.banner_desc')}
+                          Connect with top creators in 7+ languages across the world.
                         </h5>
                         <div className={cx(classes.btnArea, classes.download)}>
-                          <a href="#">
+                          {/* <a href="#">
                             <img src="/images/social/app-store.png" alt="app store" />
-                          </a>
+                          </a> */}
                           <a href="#">
                             <img src="/images/social/play-store.png" alt="play store" />
                           </a>
@@ -178,18 +178,18 @@ function BannerSlider() {
                     <Box px={{ sm: 2 }}>
                       <div className={classes.text}>
                         <h4 className={text.title}>
-                          {t('social-landing.banner_title')}
+                          Where every connection tells a story
                         </h4>
                         <h5 className={text.subtitle}>
-                          {t('social-landing.banner_desc')}
+                          Share your story with premium content creators matching to your interests
                         </h5>
                         <div className={classes.btnArea}>
                           <Box justifyContent="center">
-                            <Button color="primary" href="#" className={classes.button}>
+                            {/* <Button color="primary" href="#" className={classes.button}>
                               {t('btn_detail')}
-                            </Button>
-                            <Button size="large" variant="contained" color="secondary" href={link.social.register} className={classes.button}>
-                              {t('btn_get')}
+                            </Button> */}
+                            <Button size="large" variant="contained" color="secondary" href={link.social.onboarding} className={classes.button}>
+                              Start your 7 days free trial
                             </Button>
                           </Box>
                         </div>
@@ -206,20 +206,20 @@ function BannerSlider() {
                 <Grid container justifyContent="flex-end">
                   <Grid item md={12} xs={12}>
                     <div className={cx(classes.text, align.textCenter)}>
-                      <h4 className={text.title}>
-                        {t('social-landing.banner_title')}
+                      <h4 className={text.title2}>
+                        Meaningful One-on-One Video Chats with Creators Who Inspire You
                       </h4>
                       <h5 className={text.subtitle}>
-                        {t('social-landing.banner_desc')}
+                        Safe, meaningful video connections. 100% secure video calls with verified creators
                       </h5>
                       <div className={classes.btnArea}>
                         <Box justifyContent="center">
-                          <Button color="primary" href="#" className={classes.button}>
-                            {t('btn_detail')}
+                          <Button color="primary" href={link.social.onboarding} className={classes.button}>
+                            Become a Creator
                           </Button>
-                          <Button size="large" variant="contained" color="secondary" href={link.social.register} className={classes.button}>
+                          {/* <Button size="large" variant="contained" color="secondary" href={link.social.register} className={classes.button}>
                             {t('btn_get')}
-                          </Button>
+                          </Button> */}
                         </Box>
                       </div>
                     </div>
@@ -248,24 +248,24 @@ function BannerSlider() {
               className={cx(classes.btnNav, curSlide === 0 ? classes.active : '')}
               onClick={() => gotoSlide(0)}
             >
-              <strong>First Slide</strong>
-              Interdum et malesuada fames ac ante
+              <strong>Discover</strong>
+              &nbsp;
             </ButtonBase>
             <Divider className={classes.divider} orientation="vertical" flexItem />
             <ButtonBase
               className={cx(classes.btnNav, curSlide === 1 ? classes.active : '')}
               onClick={() => gotoSlide(1)}
             >
-              <strong>Second Slide</strong>
-              Interdum et malesuada fames ac ante
+              <strong>Short stories</strong>
+              &nbsp;
             </ButtonBase>
             <Divider className={classes.divider} orientation="vertical" flexItem />
             <ButtonBase
               className={cx(classes.btnNav, curSlide === 2 ? classes.active : '')}
               onClick={() => gotoSlide(2)}
             >
-              <strong>Third Slide</strong>
-              Interdum et malesuada fames ac ante
+              <strong>100% Safe</strong>
+              &nbsp;
             </ButtonBase>
           </nav>
         </Container>

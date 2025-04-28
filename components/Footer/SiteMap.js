@@ -14,9 +14,9 @@ import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
 import Decoration from './Decoration';
-import logo from '~/public/images/logo-social.svg';
-import brand from '~/public/text/brand';
-import SelectLang from '../LangSwitch/Select';
+import logo from '~/public/images/biffleLogo.png';
+// import brand from '~/public/text/brand';
+// import SelectLang from '../LangSwitch/Select';
 import { useTextAlign } from '~/theme/common';
 import useStyles from './sitemap-style';
 
@@ -24,7 +24,7 @@ function Copyright() {
   return (
     <Typography variant="body2" display="block">
       &copy;&nbsp;
-      {brand.social.footerText}
+      2025, Sofnics Tech Labs (P) (L) All Rights reserved
     </Typography>
   );
 }
@@ -32,18 +32,19 @@ function Copyright() {
 const footers = [
   {
     title: 'Company',
-    description: ['Team', 'History', 'Contact us', 'Locations'],
-    link: ['#team', '#history', '#contact-us', '#locations'],
+    description: ['Contact us', 'Privacy Policy', 'Terms of Use', 'Refund Policy'],
+    link: ['/contact-us', '/privacy-policy', '/terms-of-use', '/refund-policy'],
+  },
+
+  {
+    title: 'Community',
+    description: ['Safety Centre', 'Community Guidelines', 'Creator Centre', 'Earn from Biffle.ai'],
+    link: ['/safety-centre', '/guidelines', '/creator-centre', '/earn-from-biffle'],
   },
   {
     title: 'Resources',
-    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
-    link: ['#resource', '#resource-name', '#another-resource', '#final-resource'],
-  },
-  {
-    title: 'Legal',
-    description: ['Privacy policy', 'Terms of use'],
-    link: ['#privacy-policy', '#terms-of-use'],
+    description: ['Blogs', 'Moderation partners', 'Payment partners'],
+    link: ['/blogs', '/mod-partners', '/google-play'],
   },
 ];
 
@@ -54,7 +55,8 @@ function Footer(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   // Translation Function
-  const { bg, toggleDir } = props;
+  // const { bg, toggleDir } = props;
+  const { bg } = props;
   const { t } = useTranslation('common');
 
   const { classes, cx } = useStyles();
@@ -68,14 +70,17 @@ function Footer(props) {
           <Grid item xs={12} md={3}>
             <div className={classes.logo}>
               <img src={logo} alt="logo" />
-              <Typography variant="h6" color="textPrimary">
+              {/* <Typography variant="h6" color="textPrimary">
                 {brand.social.projectName}
-              </Typography>
+              </Typography> */}
             </div>
             <Typography color="textPrimary" className={classes.footerDesc} gutterBottom>
               {t('social-landing.banner_title')}
               .&nbsp;
               {t('social-landing.banner_desc')}
+            </Typography>
+            <Typography color="textPrimary" className={classes.footerDesc} gutterBottom>
+              social@biffle.ai
             </Typography>
             {isDesktop && <Copyright />}
           </Grid>
@@ -160,7 +165,7 @@ function Footer(props) {
                 <i className="ion-social-linkedin" />
               </IconButton>
             </div>
-            <SelectLang toggleDir={toggleDir} />
+            {/* <SelectLang toggleDir={toggleDir} /> */}
           </Grid>
         </Grid>
         {isMobile && (
@@ -176,7 +181,7 @@ function Footer(props) {
 }
 
 Footer.propTypes = {
-  toggleDir: PropTypes.func,
+  // toggleDir: PropTypes.func,
   bg: PropTypes.bool
 };
 

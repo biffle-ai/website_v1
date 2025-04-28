@@ -11,9 +11,9 @@ import Switch from '@mui/material/Switch';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import LanguageSwitch from '../../LangSwitch/Menu';
+// import LanguageSwitch from '../../LangSwitch/Menu';
 import useStyles from '../header-style';
-import i18nextConfig from '~/next-i18next.config';
+// import i18nextConfig from '~/next-i18next.config';
 
 let themeType = 'light';
 if (typeof Storage !== 'undefined') {
@@ -110,7 +110,7 @@ function Settings(props) {
           </ListItem>
         </List>
         <Divider />
-        <List
+        {/* <List
           component="nav"
           className={classes.langMenu}
           aria-label="Language-menu"
@@ -130,7 +130,7 @@ function Settings(props) {
               closePopup={handleClose}
             />
           ))}
-        </List>
+        </List> */}
       </Popover>
     </div>
   );
@@ -138,7 +138,7 @@ function Settings(props) {
 
 Settings.propTypes = {
   toggleDark: PropTypes.func.isRequired,
-  toggleDir: PropTypes.func.isRequired,
+  // toggleDir: PropTypes.func.isRequired,
   invert: PropTypes.bool,
 };
 

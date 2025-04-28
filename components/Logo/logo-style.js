@@ -9,7 +9,7 @@ const useStyles = makeStyles({ uniqId: 'logo' })(theme => ({
   landscape: {
     alignItems: 'center',
     position: 'relative',
-    top: -2,
+    // top: -2,
     '& img': {
       marginRight: theme.spacing(1)
     }
@@ -25,17 +25,17 @@ const useStyles = makeStyles({ uniqId: 'logo' })(theme => ({
   small: {
     fontSize: 16,
     '& img': {
-      maxWidth: 34,
+      // maxWidth: 34,
       height: 34
     }
   },
   medium: {
     fontSize: 18,
     '& img': {
-      maxWidth: 54,
+      // maxWidth: 54,
       height: 54,
       [theme.breakpoints.down('sm')]: {
-        maxWidth: 34,
+        // maxWidth: 34,
         height: 34
       }
     }
@@ -43,7 +43,7 @@ const useStyles = makeStyles({ uniqId: 'logo' })(theme => ({
   large: {
     fontSize: 28,
     '& img': {
-      maxWidth: 64,
+      // maxWidth: 64,
       height: 64
     }
   }

@@ -1,6 +1,7 @@
 const link = {
   social: {
     home: '/',
+    onboarding: '/onboarding',
     about: '/about',
     team: '/about/team',
     blog: '/blog',

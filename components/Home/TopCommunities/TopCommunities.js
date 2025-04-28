@@ -15,7 +15,7 @@ import useStyles from './top-communities-style';
 const commData = [
   {
     icon: 'ion-ios-football',
-    name: 'Sport & Soccer',
+    name: 'Gossip queen',
     count: 100,
     color1: '#CBE9C4',
     color2: '#1D9AEB',
@@ -28,7 +28,7 @@ const commData = [
   },
   {
     icon: 'ion-navigate',
-    name: 'Adventures',
+    name: 'Role-play chats',
     count: 100,
     color1: '#D6EC2F',
     color2: '#EB6F1D',
@@ -41,7 +41,7 @@ const commData = [
   },
   {
     icon: 'ion-ios-speedometer',
-    name: 'Moto Racing',
+    name: 'Girl next door',
     count: 100,
     color1: '#1DEBE4',
     color2: '#2F84EC',
@@ -54,7 +54,7 @@ const commData = [
   },
   {
     icon: 'ion-music-note',
-    name: 'Music',
+    name: 'Music lovers',
     count: 100,
     color1: '#FF0000',
     color2: '#002BFF',
@@ -67,7 +67,7 @@ const commData = [
   },
   {
     icon: 'ion-ios-paw',
-    name: 'Animal Lovers',
+    name: 'Astro believers',
     count: 100,
     color1: '#EB9D1D',
     color2: '#FF81B6',
@@ -80,7 +80,7 @@ const commData = [
   },
   {
     icon: 'ion-ios-game-controller-b',
-    name: 'Games',
+    name: 'Fitness enthusiasts',
     count: 100,
     color1: '#EB1DBE',
     color2: '#2F84EC',

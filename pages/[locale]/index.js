@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+// import useMediaQuery from '@mui/material/useMediaQuery';
+// import { useTheme } from '@mui/material/styles';
 import Head from 'next/head';
 // Use this below for Server Side Render/Translation (SSR)
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -17,7 +17,7 @@ import Feature from '~/components/Home/Feature';
 import Discover from '~/components/Home/Discover';
 import Stories from '~/components/Home/Stories';
 import TopCommunities from '~/components/Home/TopCommunities';
-import NewsEvent from '~/components/Home/NewsEvent';
+// import NewsEvent from '~/components/Home/NewsEvent';
 import CallAction from '~/components/CallAction';
 import Corner from '~/components/Home/Corner';
 import Footer from '~/components/Footer';
@@ -26,8 +26,8 @@ import brand from '~/public/text/brand';
 
 function Landing(props) {
   // Theme breakpoints
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const { classes, cx } = useSpacing();
   const { onToggleDark, onToggleDir } = props;
@@ -64,9 +64,9 @@ function Landing(props) {
           <section id="community" className={classes.spaceTopShort}>
             <TopCommunities />
           </section>
-          <section id="blog" className={isMobile ? classes.spaceTop : ''}>
+          {/* <section id="blog" className={isMobile ? classes.spaceTop : ''}>
             <NewsEvent />
-          </section>
+          </section> */}
           <section id="call-action">
             <CallAction />
           </section>

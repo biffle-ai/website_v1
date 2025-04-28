@@ -1,12 +1,12 @@
 module.exports = {
   social: {
-    name: 'Social Apps',
-    desc: 'Oiron Social Apps | React Landing Page Template',
-    prefix: 'oiron',
-    footerText: 'Oiron Theme 2022',
-    logoText: 'Oiron Theme',
-    projectName: 'Social Apps',
-    url: 'oiron2.indisains.com/social-apps',
-    img: '/static/images/logo-social.png'
+    name: 'Biffle ai',
+    desc: 'Biffle ai | Bringing you closer to people',
+    prefix: 'biffle.ai',
+    footerText: 'Biffle.ai',
+    logoText: 'Biffle.ai',
+    projectName: 'Biffle.ai',
+    url: 'biffle.ai',
+    img: '/static/images/biffleLogo.png'
   }
 };

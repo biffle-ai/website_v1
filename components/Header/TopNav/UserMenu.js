@@ -19,8 +19,8 @@ function UserMenu(props) {
     <div className={classes.userMenu}>
       { isDesktop && (
         <div>
-          <Button href={link.social.login}>{t('login')}</Button>
-          <Button variant="contained" color="primary" href={link.social.register}>{t('register')}</Button>
+          {/* <Button href={link.social.login}>{t('login')}</Button> */}
+          <Button variant="contained" color="primary" href={link.social.onboarding}>Become a Creator</Button>
           <span className={classes.vDivider} />
         </div>
       )}
