@@ -13,7 +13,7 @@ import Divider from '@mui/material/Divider';
 import Snackbar from '@mui/material/Snackbar';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/biffleLogo.png';
+import logo from '~/public/images/biffleLogo.svg';
 import brand from '~/public/text/brand';
 import { useText, useTextAlign } from '~/theme/common';
 import Decoration from './Decoration';

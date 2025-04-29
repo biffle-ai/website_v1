@@ -14,7 +14,7 @@ import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
 import Decoration from './Decoration';
-import logo from '~/public/images/biffleLogo.png';
+import logo from '~/public/images/biffleLogo.svg';
 // import brand from '~/public/text/brand';
 // import SelectLang from '../LangSwitch/Select';
 import { useTextAlign } from '~/theme/common';

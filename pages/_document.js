@@ -30,7 +30,7 @@ class MyDocument extends Document {
                 top: 'calc(40% - 50px)',
                 left: 'calc(40% - 80px)'
               }}
-              src="/images/biffleLogo.png"
+              src="/images/biffleLogo.svg"
               alt="loading"
             />
           </div>

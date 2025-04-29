@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import logo from '~/public/images/biffleLogo.png';
+import logo from '~/public/images/biffleLogo.svg';
 // import brand from '~/public/text/brand';
 import useStyles from './logo-style';
 

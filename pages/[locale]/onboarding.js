@@ -9,12 +9,16 @@ import { useTranslation } from 'next-i18next';
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // Use this below for Static Site Generation (SSG)
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
+import { onBoardingFAQ } from '~/lib/faq';
 import { useSpacing } from '~/theme/common';
 import Header from '~/components/Header/Basic';
 import Footer from '~/components/Footer';
 import brand from '~/public/text/brand';
 import link from '~/public/text/link';
 import OnboardingForm from '../../components/Forms/onboardingForm';
+import Features from '../../components/Forms/features';
+import Testimonials from '../../components/Forms/Testimonials';
+import FAQ from '../../components/Forms/FAQ';
 
 function OnboardingPage(props) {
   // Theme breakpoints
@@ -45,6 +49,9 @@ function OnboardingPage(props) {
           <div className={cx(classes.containerGeneral, classes.containerFront)}>
             <OnboardingForm />
           </div>
+          <Features />
+          <Testimonials data={onBoardingFAQ} />
+          <FAQ />
         </Container>
         <div className={isMobile ? classes.spaceTopShort : ''}>
           <Footer toggleDir={onToggleDir} />

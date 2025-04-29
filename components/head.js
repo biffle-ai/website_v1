@@ -37,14 +37,14 @@ const HeadComponent = () => (
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
     {/*  Facebook */}
-    <meta property="author" content="oiron" />
-    <meta property="og:site_name" content="oiron.indisains.com" />
+    <meta property="author" content="biffle.ai" />
+    <meta property="og:site_name" content="biffle.ai" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     {/*  Twitter */}
-    <meta property="twitter:site" content="oiron.indisains.com" />
-    <meta property="twitter:domain" content="oiron.indisains.com" />
-    <meta property="twitter:creator" content="oiron" />
+    <meta property="twitter:site" content="biffle.ai" />
+    <meta property="twitter:domain" content="biffle.ai" />
+    <meta property="twitter:creator" content="biffle.ai" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:image:src" content="/images/logo-social.png" />
     <meta property="og:url" content={brand.social.url} />
