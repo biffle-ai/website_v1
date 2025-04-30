@@ -23,6 +23,7 @@ import Corner from '~/components/Home/Corner';
 import Footer from '~/components/Footer';
 import Notification from '~/components/Notification';
 import brand from '~/public/text/brand';
+import VideoReel from '../../components/videReel';
 
 function Landing(props) {
   // Theme breakpoints
@@ -64,9 +65,9 @@ function Landing(props) {
           <section id="community" className={classes.spaceTopShort}>
             <TopCommunities />
           </section>
-          {/* <section id="blog" className={isMobile ? classes.spaceTop : ''}>
-            <NewsEvent />
-          </section> */}
+          <section id="blog">
+            <VideoReel />
+          </section>
           <section id="call-action">
             <CallAction />
           </section>

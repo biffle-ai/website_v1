@@ -9,7 +9,7 @@ import useStyles from './about-style';
 function Banner(props) {
   const { classes, cx } = useStyles();
   const { classes: text } = useText();
-  const { children } = props;
+  const { children, title, subTitle } = props;
 
   return (
     <HeroBanner>
@@ -19,18 +19,14 @@ function Banner(props) {
             <Grid item md={6} xs={12}>
               <Box px={{ sm: 2 }}>
                 <div className={classes.text}>
-                  <h4 className={cx(text.title2, text.textPrimary)}>Pellentesque habitant morbi tristique senectus</h4>
-                  <h5 className={text.subtitle2}>
-                    {'Multiple lines of text that form the lede,informing new readers quickly and efficiently about what\'s most interesting in this posts contents'}
-                  </h5>
+                  <h4 className={cx(text.title2, text.textPrimary)}>{title}</h4>
+                  <h5 className={text.subtitle2}>{subTitle}</h5>
                 </div>
               </Box>
             </Grid>
             <Grid item md={6} xs={12}>
               <Box px={{ sm: 5 }}>
-                <div className={classes.img}>
-                  {children}
-                </div>
+                <div className={classes.img}>{children}</div>
               </Box>
             </Grid>
           </Grid>
@@ -42,6 +38,8 @@ function Banner(props) {
 
 Banner.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
 };
 
 export default Banner;

@@ -2,6 +2,10 @@ const link = {
   social: {
     home: '/',
     onboarding: '/onboarding',
+    terms: '/terms-of-use',
+    privacy: '/privacy-policy',
+    guidelines: '/guidelines',
+    safetycentre: '/safety-centre',
     about: '/about',
     team: '/about/team',
     blog: '/blog',

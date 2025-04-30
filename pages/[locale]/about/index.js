@@ -57,7 +57,7 @@ function About(props) {
             <Container>
               <Grid container justifyContent="center" spacing={6}>
                 <Grid item md={6} xs={12}>
-                  <AboutVideo />
+                  {/* <AboutVideo /> */}
                 </Grid>
                 <Grid item md={6} sm={8} xs={12}>
                   <AboutProgress />
