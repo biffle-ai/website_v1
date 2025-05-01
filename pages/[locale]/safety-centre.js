@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTranslation } from 'next-i18next';
+// import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -12,19 +12,19 @@ import Banner from '~/components/About/Banner';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
-import termsData from '~/lib/about';
+import termsData from '~/lib/safety';
 import imgAPI from '~/public/images/imgAPI';
 import brand from '~/public/text/brand';
 import { useSpacing } from '~/theme/common';
-import GenericPage from '../../../components/genericInfo';
+import GenericPage from '../../components/genericInfo';
 
-function AboutUS(props) {
+function SafetyCentre(props) {
   // Theme breakpoints
 
   // Translation Function
-  const { t } = useTranslation('common');
+//   const { t } = useTranslation('common');
 
-  const { classes, cx } = useSpacing();
+  const { classes } = useSpacing();
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
   const { onToggleDark, onToggleDir } = props;
@@ -43,9 +43,9 @@ function AboutUS(props) {
         />
         {/* <Container maxWidth="lg"> */}
         {/* <div className={cx(classes.containerGeneral, classes.containerFront)}> */}
-        <Banner title="About us" subTitle="">
+        <Banner title="Safety Centre" subTitle="">
           <img
-            src={imgAPI.socialInner[5]}
+            src={imgAPI.socialInner[9]}
             data-2d={imgAPI.socialInner[0]}
             data-3d={imgAPI.socialInner[1]}
             className="img-2d3d"
@@ -53,9 +53,9 @@ function AboutUS(props) {
           />
         </Banner>
         <Container maxWidth="lg">
-        <GenericPage title="Terms of use" termsData={termsData} />
+          <GenericPage title="Terms of use" termsData={termsData} />
           {/* <div className={cx(classes.containerGeneral, classes.containerFront)}>
-            
+
           </div> */}
         </Container>
         <div className={isMobile ? classes.spaceTopShort : ''}>
@@ -66,7 +66,7 @@ function AboutUS(props) {
   );
 }
 
-AboutUS.propTypes = {
+SafetyCentre.propTypes = {
   onToggleDark: PropTypes.func.isRequired,
   onToggleDir: PropTypes.func.isRequired,
 };
@@ -78,4 +78,4 @@ AboutUS.propTypes = {
 const getStaticProps = makeStaticProps(['common']);
 export { getStaticPaths, getStaticProps };
 
-export default AboutUS;
+export default SafetyCentre;

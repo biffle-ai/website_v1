@@ -1,3 +1,3 @@
-const single = ['home', 'Safety centre', 'stories', 'community'];
+const single = ['home', 'safety centre', 'stories', 'community'];
 
 export default single;

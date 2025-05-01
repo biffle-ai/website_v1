@@ -8,6 +8,7 @@ import Head from 'next/head';
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // Use this below for Static Site Generation (SSG)
 import Hidden from '@mui/material/Hidden';
+import { makeStyles } from 'tss-react/mui';
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
 import { useSpacing } from '~/theme/common';
 import Header from '~/components/Header';
@@ -25,12 +26,18 @@ import Notification from '~/components/Notification';
 import brand from '~/public/text/brand';
 import VideoReel from '../../components/videReel';
 
+const useColorStyles = makeStyles({ uniqId: 'cta' })((theme) => ({
+  BgColor: {
+    backgroundColor: theme.palette.primary.main,
+  },
+}));
 function Landing(props) {
   // Theme breakpoints
   // const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const { classes, cx } = useSpacing();
+  const {classes: colorClasses} = useColorStyles();
   const { onToggleDark, onToggleDir } = props;
   return (
     <React.Fragment>
@@ -73,12 +80,12 @@ function Landing(props) {
           </section>
         </main>
         <Footer bg toggleDir={onToggleDir} />
-        <Hidden mdDown>
+        {/* <Hidden mdDown>
           <Corner />
         </Hidden>
         <Hidden lgDown>
           <Notification />
-        </Hidden>
+        </Hidden> */}
       </div>
     </React.Fragment>
   );

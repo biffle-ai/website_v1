@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
+import NextLink from 'next/link';
 import Decoration from './Decoration';
 import logo from '~/public/images/biffleLogo.svg';
 // import brand from '~/public/text/brand';
@@ -23,8 +24,7 @@ import useStyles from './sitemap-style';
 function Copyright() {
   return (
     <Typography variant="body2" display="block">
-      &copy;&nbsp;
-      2025, Sofnics Tech Labs (P) (L) All Rights reserved
+      &copy;&nbsp; 2025, Sofnics Tech Labs (P) (L) All Rights reserved
     </Typography>
   );
 }
@@ -32,20 +32,36 @@ function Copyright() {
 const footers = [
   {
     title: 'Company',
-    description: ['Contact us', 'Privacy Policy', 'Terms of Use', 'Refund Policy'],
-    link: ['/contact-us', '/privacy-policy', '/terms-of-use', '/refund-policy'],
+    description: [
+      'About us',
+      'Privacy Policy',
+      'Terms of Use',
+      'Refund Policy',
+    ],
+    link: ['/about', '/privacy-policy', '/terms-of-use', '/refund-policy'],
   },
 
   {
     title: 'Community',
-    description: ['Safety Centre', 'Community Guidelines', 'Creator Centre', 'Earn from Biffle.ai'],
-    link: ['/safety-centre', '/guidelines', '/creator-centre', '/earn-from-biffle'],
+    description: [
+      'Safety Centre',
+      'Community Guidelines',
+      'Creator Centre',
+      'Earn from Biffle.ai',
+    ],
+    link: [
+      '/safety-centre',
+      '/guidelines',
+      // '/creator-centre',
+      '/utils/coming-soon',
+      '/onboarding',
+    ],
   },
-  {
-    title: 'Resources',
-    description: ['Blogs', 'Moderation partners', 'Payment partners'],
-    link: ['/blogs', '/mod-partners', '/google-play'],
-  },
+  // {
+  //   title: 'Resources',
+  //   description: ['Blogs', 'Moderation partners', 'Payment partners'],
+  //   link: ['/blogs', '/mod-partners', '/google-play'],
+  // },
 ];
 
 function Footer(props) {
@@ -74,23 +90,42 @@ function Footer(props) {
                 {brand.social.projectName}
               </Typography> */}
             </div>
-            <Typography color="textPrimary" className={classes.footerDesc} gutterBottom>
+            <Typography
+              color="textPrimary"
+              className={classes.footerDesc}
+              gutterBottom
+            >
               {t('social-landing.banner_title')}
               .&nbsp;
               {t('social-landing.banner_desc')}
             </Typography>
-            <Typography color="textPrimary" className={classes.footerDesc} gutterBottom>
+            <Typography
+              color="textPrimary"
+              className={classes.footerDesc}
+              gutterBottom
+            >
               social@biffle.ai
             </Typography>
             {isDesktop && <Copyright />}
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid container justifyContent="space-evenly">
-              {footers.map(footer => (
-                <Grid item xs={12} md={3} key={footer.title} className={classes.siteMapItem}>
+              {footers.map((footer) => (
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  key={footer.title}
+                  className={classes.siteMapItem}
+                >
                   {isDesktop && (
                     <div>
-                      <Typography variant="h6" className={classes.title} color="textPrimary" gutterBottom>
+                      <Typography
+                        variant="h6"
+                        className={classes.title}
+                        color="textPrimary"
+                        gutterBottom
+                      >
                         {footer.title}
                       </Typography>
                       <ul>
@@ -117,16 +152,16 @@ function Footer(props) {
                       }}
                     >
                       <AccordionSummary
-                        expandIcon={<ExpandMoreIcon className={classes.accordionIcon} />}
+                        expandIcon={
+                          <ExpandMoreIcon className={classes.accordionIcon} />
+                        }
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         classes={{
                           content: classes.accordionContent,
                         }}
                       >
-                        <strong>
-                          {footer.title}
-                        </strong>
+                        <strong>{footer.title}</strong>
                       </AccordionSummary>
                       <AccordionDetails>
                         <ul>
@@ -152,18 +187,43 @@ function Footer(props) {
           </Grid>
           <Grid item xs={12} md={3}>
             <div className={classes.socmed}>
-              <IconButton aria-label="FB" className={classes.margin} size="small">
-                <i className="ion-social-twitter" />
+              <IconButton
+                aria-label="FB"
+                className={classes.margin}
+                size="small"
+              >
+                <NextLink href="https://www.youtube.com/@biffle-ai">
+                  <i className="ion-social-youtube" />
+                </NextLink>
               </IconButton>
-              <IconButton aria-label="TW" className={classes.margin} size="small">
-                <i className="ion-social-facebook" />
-              </IconButton>
-              <IconButton aria-label="IG" className={classes.margin} size="small">
-                <i className="ion-social-instagram" />
-              </IconButton>
-              <IconButton aria-label="LI" className={classes.margin} size="small">
-                <i className="ion-social-linkedin" />
-              </IconButton>
+
+              <NextLink href="https://www.facebook.com/profile.php?id=61574120158673">
+                <IconButton
+                  aria-label="TW"
+                  className={classes.margin}
+                  size="small"
+                >
+                  <i className="ion-social-facebook" />
+                </IconButton>
+              </NextLink>
+              <NextLink href="https://www.instagram.com/biffle.ai?igsh=ZmQ1ZWJxM282anN3&utm_source=qr">
+                <IconButton
+                  aria-label="IG"
+                  className={classes.margin}
+                  size="small"
+                >
+                  <i className="ion-social-instagram" />
+                </IconButton>
+              </NextLink>
+              <NextLink href="https://www.linkedin.com/company/biffle-ai/">
+                <IconButton
+                  aria-label="LI"
+                  className={classes.margin}
+                  size="small"
+                >
+                  <i className="ion-social-linkedin" />
+                </IconButton>
+              </NextLink>
             </div>
             {/* <SelectLang toggleDir={toggleDir} /> */}
           </Grid>
@@ -182,12 +242,12 @@ function Footer(props) {
 
 Footer.propTypes = {
   // toggleDir: PropTypes.func,
-  bg: PropTypes.bool
+  bg: PropTypes.bool,
 };
 
 Footer.defaultProps = {
   toggleDir: () => {},
-  bg: false
+  bg: false,
 };
 
 export default Footer;

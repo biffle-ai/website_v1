@@ -5,6 +5,9 @@ const useStyles = makeStyles({ uniqId: 'action' })(theme => ({
     textAlign: 'center',
     position: 'relative',
     zIndex: 1,
+    padding: theme.spacing(5),
+    marginBlock: theme.spacing(5),
+    backgroundColor: '#f2f2f2',
     [theme.breakpoints.up('sm')]: {
       marginTop: theme.spacing(10),
       paddingBottom: theme.spacing(10),

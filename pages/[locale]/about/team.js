@@ -52,7 +52,7 @@ function Team(props) {
         <div className={classes.containerFront}>
           <Banner>
             <img
-              src={imgAPI.ui[5]}
+              src={imgAPI.ui[4]}
               data-2d={imgAPI.ui[4]}
               data-3d={imgAPI.ui[5]}
               className="img-2d3d"

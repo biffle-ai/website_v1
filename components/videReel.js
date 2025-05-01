@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import {
   Box,
@@ -124,20 +126,20 @@ const useStyles = makeStyles({ uniqId: 'videoReel' })((theme) => ({
   },
   pauseButton: {
     position: 'absolute',
-    bottom: theme.spacing(3),
-    right: theme.spacing(3),
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
     '&:hover': {
       backgroundColor: 'rgba(255, 255, 255, 0.4)',
     },
-    padding: theme.spacing(1.5),
+    padding: theme.spacing(1.8),
     borderRadius: '50%',
     backdropFilter: 'blur(4px)',
     transition: 'all 0.3s ease',
   },
   pauseIcon: {
-    width: '1.5rem',
-    height: '1.5rem',
+    width: '2rem',
+    height: '2rem',
     color: theme.palette.common.white,
   },
   ctaButton: {
@@ -153,6 +155,7 @@ const useStyles = makeStyles({ uniqId: 'videoReel' })((theme) => ({
   },
   ctaContainer: {
     textAlign: 'center',
+    marginTop: theme.spacing(4),
   },
 }));
 
@@ -162,8 +165,36 @@ const VideoReel = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
   const videoRef = useRef(null);
+console.log(isPageLoaded);
 
     // Detect when the page is fully loaded
+    // Function to handle page load completion
+    const handlePageLoad = () => {
+      setIsPageLoaded(true);
+      // Add a slight delay before loading video to ensure other critical resources load first
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.load();
+        }
+      }, 1000);
+    };
+    
+    // Handle video loaded metadata event
+    const handleLoadedMetadata = () => {
+      setIsLoaded(true);
+    };
+    
+    const togglePlay = () => {
+      if (videoRef.current && isLoaded) {
+        if (isPlaying) {
+          videoRef.current.pause();
+        } else {
+          videoRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+      }
+    };
+    
     useEffect(() => {
         if (document.readyState === 'complete') {
           handlePageLoad();
@@ -175,33 +206,6 @@ const VideoReel = () => {
           window.removeEventListener('load', handlePageLoad);
         };
       }, []);
-  // Function to handle page load completion
-  const handlePageLoad = () => {
-    setIsPageLoaded(true);
-    // Add a slight delay before loading video to ensure other critical resources load first
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.load();
-      }
-    }, 1000);
-  };
-
-  // Handle video loaded metadata event
-  const handleLoadedMetadata = () => {
-    setIsLoaded(true);
-  };
-
-  const togglePlay = () => {
-    if (videoRef.current && isLoaded) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
 
   return (
     <Box className={classes.root}>
@@ -215,8 +219,6 @@ const VideoReel = () => {
             certified creators.
           </Typography>
         </Box>
-
-        {/* Video Reel Container */}
         <Box className={classes.videoContainer}>
           {/* Show placeholder image until page is fully loaded */}
           {!isPageLoaded && (

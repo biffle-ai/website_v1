@@ -1,55 +1,47 @@
-import React, { useState, Fragment } from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import FilledInput from '@mui/material/FilledInput';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Head from 'next/head';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
+import React, { Fragment, useState } from 'react';
+import Header from '~/components/Header';
+import Footer from '~/components/Footer';
 // Use this below for Server Side Render/Translation (SSR)
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // Use this below for Static Site Generation (SSG)
-import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
-import Logo from '~/components/Logo';
 import PageDeco from '~/components/Decoration/PageDeco';
-import { useSpacing, useTextAlign, useText } from '~/theme/common';
+import Logo from '~/components/Logo';
+import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
 import brand from '~/public/text/brand';
+import { useSpacing, useText, useTextAlign } from '~/theme/common';
 
-function ComingSoon() {
+function ComingSoon(props) {
   const { classes, cx } = useSpacing();
   const { classes: align } = useTextAlign();
   const { classes: text } = useText();
   const { t } = useTranslation('common');
-
+  const { onToggleDark, onToggleDir } = props;
   // Breakpoints
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   const [email, setEmail] = useState('');
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setEmail(event.target.value);
   };
 
   return (
     <Fragment>
       <Head>
-        <title>
-          { brand.social.name + ' - Coming Soon' }
-        </title>
+        <title>{brand.social.name + ' - Coming Soon'}</title>
       </Head>
       <CssBaseline />
       <PageDeco deco />
+      <Header onToggleDark={onToggleDark} onToggleDir={onToggleDir} home />
       <Container maxWidth="sm">
         <div className={classes.fullScreenContainer}>
           <Grid container alignItems="center">
@@ -68,11 +60,9 @@ function ComingSoon() {
                   {t('util_soon')}
                 </h3>
                 <Box mb={5}>
-                  <h5 className={text.subtitle2}>
-                    {t('util_soon_desc')}
-                  </h5>
+                  <h5 className={text.subtitle2}>{t('util_soon_desc')}</h5>
                 </Box>
-                <div className={classes.form}>
+                {/* <div className={classes.form}>
                   <Box mb={{ sm: 10 }}>
                     <Grid container justifyContent="center">
                       <Grid item sm={10} xs={12}>
@@ -118,12 +108,14 @@ function ComingSoon() {
                   <IconButton color="primary" href="#" size="large"><InstagramIcon className={classes.ig} /></IconButton>
                   <IconButton color="primary" href="#" size="large"><TwitterIcon className={classes.tw} /></IconButton>
                   <IconButton color="primary" href="#" size="large"><LinkedInIcon className={classes.li} /></IconButton>
-                </Box>
+                </Box> */}
               </div>
             </Grid>
           </Grid>
         </div>
+        
       </Container>
+      <Footer bg toggleDir={onToggleDir} />
     </Fragment>
   );
 }

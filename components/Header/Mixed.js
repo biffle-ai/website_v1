@@ -35,7 +35,7 @@ function Mixed(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const [menuList] = useState([
     createData(navMenu[0], '#' + navMenu[0]),
-    createData(navMenu[1], '#' + navMenu[1]),
+    createData(navMenu[1], 'safety-centre'),
     createData(navMenu[2], '#' + navMenu[2]),
     createData(navMenu[3], '#' + navMenu[3]),
   ]);
@@ -107,7 +107,7 @@ function Mixed(props) {
                     menuSecondary={samplePages}
                     toggle={handleToggle}
                     close={handleClose}
-                    singleNav={home}
+                    singleNav={false}
                   />
                 </div>
               )}
