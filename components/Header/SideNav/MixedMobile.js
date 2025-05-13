@@ -122,7 +122,7 @@ function MixedMobile(props) {
             <Button
               variant="contained"
               color="primary"
-              href={link.social.register}
+              href={link.social.onboarding}
             >
               Become a Creator
             </Button>

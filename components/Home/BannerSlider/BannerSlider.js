@@ -249,7 +249,7 @@ function BannerSlider() {
               onClick={() => gotoSlide(0)}
             >
               <strong>Discover</strong>
-              &nbsp;
+              100% verified creators
             </ButtonBase>
             <Divider className={classes.divider} orientation="vertical" flexItem />
             <ButtonBase
@@ -257,7 +257,7 @@ function BannerSlider() {
               onClick={() => gotoSlide(1)}
             >
               <strong>Short stories</strong>
-              &nbsp;
+              Make your conversation interesting
             </ButtonBase>
             <Divider className={classes.divider} orientation="vertical" flexItem />
             <ButtonBase
@@ -265,7 +265,7 @@ function BannerSlider() {
               onClick={() => gotoSlide(2)}
             >
               <strong>100% Safe</strong>
-              &nbsp;
+              Trusted by 1000+ creators
             </ButtonBase>
           </nav>
         </Container>

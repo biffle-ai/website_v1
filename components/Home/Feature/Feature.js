@@ -47,8 +47,13 @@ function Feature() {
                     <div className={cx(classes.bg, classes.liquid1)} />
                     <figure className={cx(classes.screen1, classes.mobileScreen)}>
                       <img
-                        src={imgAPI.social[27]}
+                        src="/images/3.png"
                         alt="screen"
+                        style={{
+                          objectFit:'cover',
+                          height:'100%',
+                          width:'100%',
+                        }}
                       />
                     </figure>
                     <figure className={cx(classes.graphic, classes.artwork1)}>
@@ -107,8 +112,13 @@ function Feature() {
                     <div className={cx(classes.bg, classes.liquid2)} />
                     <figure className={cx(classes.screen2, classes.mobileScreen)}>
                       <img
-                        src={imgAPI.social[28]}
+                        src="/images/5.png"
                         alt="screen"
+                        style={{
+                          objectFit:'cover',
+                          height:'100%',
+                          width:'100%',
+                        }}
                       />
                     </figure>
                     <figure className={cx(classes.graphic, classes.artwork2)}>
@@ -153,8 +163,13 @@ function Feature() {
                     <div className={cx(classes.bg, classes.liquid3)} />
                     <figure className={cx(classes.screen3, classes.desktopScreen)}>
                       <img
-                        src={imgAPI.social[29]}
+                        src="/images/banner.png"
                         alt="screen"
+                        style={{
+                          objectFit:'cover',
+                          height:'100%',
+                          width:'100%',
+                        }}
                       />
                     </figure>
                     <figure className={cx(classes.graphic, classes.artwork3)}>

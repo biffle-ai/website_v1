@@ -15,7 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
 import NextLink from 'next/link';
 import Decoration from './Decoration';
-import logo from '~/public/images/biffleLogo.svg';
+import logo from '~/public/images/biffleLogo.png';
 // import brand from '~/public/text/brand';
 // import SelectLang from '../LangSwitch/Select';
 import { useTextAlign } from '~/theme/common';
@@ -38,7 +38,7 @@ const footers = [
       'Terms of Use',
       'Refund Policy',
     ],
-    link: ['/about', '/privacy-policy', '/terms-of-use', '/refund-policy'],
+    link: ['/about', '/privacy-policy', '/terms-of-use', '/utils/coming-soon'],
   },
 
   {

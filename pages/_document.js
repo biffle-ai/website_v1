@@ -26,11 +26,12 @@ class MyDocument extends Document {
             <img
               style={{
                 opacity: 0.2,
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain',
                 position: 'fixed',
-                top: 'calc(40% - 50px)',
-                left: 'calc(40% - 80px)'
               }}
-              src="/images/biffleLogo.svg"
+              src="/images/biffleLogo.png"
               alt="loading"
             />
           </div>

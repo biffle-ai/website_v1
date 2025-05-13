@@ -7,6 +7,6 @@ module.exports = {
     logoText: 'Biffle.ai',
     projectName: 'Biffle.ai',
     url: 'biffle.ai',
-    img: '/static/images/biffleLogo.svg'
+    img: '/static/images/biffleLogo.png'
   }
 };

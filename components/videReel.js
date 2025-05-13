@@ -233,7 +233,7 @@ console.log(isPageLoaded);
               classes.video,
               isLoaded ? classes.videoVisible : classes.videoHidden
             )}
-            poster="/api/placeholder/720/1280"
+            poster="/images/videoBan.png"
             preload="none"
             playsInline
             loop

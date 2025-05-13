@@ -14,35 +14,35 @@ const discoverData = [
     desc: 'Exclusive short videos and images from top creators  ',
     color: 'primary',
     illustration: [imgAPI.social[15], imgAPI.social[16]],
-    img: imgAPI.social[30]
+    img: '/images/2.png'
   },
   {
     title: 'Explore',
     desc: 'Find creators based on your matching interests and vibes',
     color: 'secondary',
     illustration: [imgAPI.social[17], imgAPI.social[18]],
-    img: imgAPI.social[31]
+    img: '/images/1.png'
   },
   {
     title: 'Speak freely',
     desc: 'With 100% safe & secure video calls, feel free to express yourself freely',
     color: 'accent',
     illustration: [imgAPI.social[25], imgAPI.social[26]],
-    img: imgAPI.social[35]
+    img: '/images/4.png'
   },
+  // {
+  //   title: 'Gift & Tips',
+  //   desc: 'Feel free to appreciate the efforts from the creator with lots of love in form of gifts and tips',
+  //   color: 'accent',
+  //   illustration: [imgAPI.social[19], imgAPI.social[20]],
+  //   img: imgAPI.social[32]
+  // },
   {
-    title: 'Gift & Tips',
-    desc: 'Feel free to appreciate the efforts from the creator with lots of love in form of gifts and tips',
-    color: 'accent',
-    illustration: [imgAPI.social[19], imgAPI.social[20]],
-    img: imgAPI.social[32]
-  },
-  {
-    title: 'Messages',
-    desc: 'Get to know your favourite creators with a private conversation over messages',
+    title: 'Made in india',
+    desc: 'We are made in india and we are here to make a difference',
     color: 'primary',
     illustration: [imgAPI.social[21], imgAPI.social[22]],
-    img: imgAPI.social[33]
+    img: '/images/6.png'
   },
   // {
   //   title: 'item5_title',
