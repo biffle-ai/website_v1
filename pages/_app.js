@@ -8,7 +8,6 @@ import createCache from '@emotion/cache';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import CssBaseline from '@mui/material/CssBaseline';
-import LoadingBar from 'react-top-loading-bar';
 import { appWithTranslation } from 'next-i18next';
 import lngDetector from '../lib/languageDetector';
 import appTheme from '~/theme/appTheme';
@@ -18,7 +17,6 @@ import '~/vendors/animate.css';
 import '~/vendors/animate-slider.css';
 import '~/vendors/hamburger-menu.css';
 import '../vendors/animate-extends.css';
-import '../vendors/react-top-loading-bar.css';
 import '../vendors/page-transition.css';
 import '../vendors/slick/slick.css';
 import '../vendors/slick/slick-theme.css';
@@ -53,7 +51,6 @@ const cacheLTR = createCache({
 
 function MyApp(props) {
   const { Component, pageProps, router } = props; // eslint-disable-line
-  const [loading, setLoading] = useState(0);
 
   const curLang = lngDetector.detect();
 
@@ -77,24 +74,6 @@ function MyApp(props) {
         direction: themeDir
       });
     }
-
-    // Enable this code below for Server Side Rendering/Translation (SSR)
-    // const { pathname, asPath, query } = router;
-    // router.push({ pathname, query }, asPath, { locale: curLang });
-
-    // Remove preloader
-    const preloader = document.getElementById('preloader');
-    if (preloader !== null || undefined) {
-      setTimeout(() => {
-        preloader.remove();
-      }, 2000);
-    }
-
-    // Remove loading bar
-    setLoading(0);
-    setTimeout(() => {
-      setLoading(100);
-    }, 2000);
   }, []);
 
   const toggleDarkTheme = () => {
@@ -130,12 +109,6 @@ function MyApp(props) {
       </Head>
       <ThemeProvider theme={muiTheme}>
         <CssBaseline />
-        <LoadingBar
-          height={0}
-          color={theme.palette.primary.main}
-          progress={loading}
-          className="top-loading-bar"
-        />
         <div id="main-wrap">
           <Component
             {...pageProps}

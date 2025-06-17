@@ -13,28 +13,6 @@ class MyDocument extends Document {
       <Html lang={currentLocale} dir={currentLocale === 'ar' ? 'rtl' : 'ltr'}>
         <HeadComponent />
         <body>
-          <div
-            id="preloader"
-            style={{
-              position: 'fixed',
-              zIndex: 10000,
-              background: '#fafafa',
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <img
-              style={{
-                opacity: 0.2,
-                width: '100%',
-                height: '100%',
-                objectFit: 'contain',
-                position: 'fixed',
-              }}
-              src="/images/biffleLogo.png"
-              alt="loading"
-            />
-          </div>
           {getInitColorSchemeScript()}
           <Main />
           <NextScript />
